@@ -12,12 +12,13 @@
       "options": {
         "gpt-4o": "GPT-4o",
         "gpt-4o-mini": "GPT-4o-Mini",
-        "gpt-4-vision-preview": "GPT-4 Vision Preview"
+        "gpt-4-vision-preview": "GPT-4 Vision Preview",
+        "gpt-5-nano": "gpt-5-nano-2025-08-07"
       }
     },
     {
       "key": "requestPath",
-      "display": "请求路径",
+      "display": "requestPath",
       "type": "input"
     },
     {
@@ -27,7 +28,7 @@
     },
     {
       "key": "customPrompt",
-      "display": "自定义 Prompt",
+      "display": "customPrompt",
       "type": "input"
     }
   ],
