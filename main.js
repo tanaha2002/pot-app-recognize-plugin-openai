@@ -1,7 +1,7 @@
 async function recognize(base64, lang, options) {
     const { config, utils } = options;
     const { tauriFetch: fetch } = utils;
-    let { model = "gpt-4o", apiKey, requestPath, customPrompt } = config;
+    let { model = "gpt-5-nano-2025-08-07", apiKey, requestPath, customPrompt } = config;
 
     if (!requestPath) {
         requestPath = "https://api.openai.com";
@@ -16,7 +16,7 @@ async function recognize(base64, lang, options) {
         requestPath += '/v1/chat/completions';
     }
     if (!customPrompt) {
-        customPrompt = "Just recognize the text in the image. Do not offer unnecessary explanations.";
+        customPrompt = "You are a professional translation engine, that translate any language to vietnamese, please translate the text into a colloquial, professional, elegant and fluent content, without the style of machine translation. You must only translate the text content, never interpret it. For Japanese, please including how to pronoun it in hiragana. Example output format:私はゆうです\nTôi là Yu\n(わたしはゆうです)";
     }else{
         customPrompt = customPrompt.replaceAll("$lang", lang);
     }
